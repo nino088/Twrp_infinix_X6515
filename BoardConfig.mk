@@ -153,6 +153,9 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.mt6768.rc
 
+# VNDK
+BOARD_VNDK_VERSION := current
+
 # TWRP Configuration
 TW_BACKUP_EXCLUSIONS := /Files/fonts
 TW_EXTRA_LANGUAGES := false
@@ -160,8 +163,8 @@ TW_DEFAULT_LANGUAGE := en
 TW_SCREEN_BLANK_ON_BOOT := true
 
 # Debug
-TWRP_INCLUDE_LOGCAT := true
-TARGET_USES_LOGD := true
+TWRP_EXCLUDE_LOGCAT := true
+TARGET_USES_LOGD := false
 
 # Tools / Resetprop and magiskboot
 TW_EXCLUDE_BASH := true
@@ -198,9 +201,12 @@ TW_CUSTOM_CLOCK_POS := "70"
 TW_CUSTOM_BATTERY_POS := "790"
 
 # Crypto
+#TW_INCLUDE_FBE_METADATA_DECRYPT := true
 #TW_INCLUDE_CRYPTO := true
 #TW_INCLUDE_CRYPTO_FBE := true
-#TW_INCLUDE_FBE_METADATA_DECRYPT := true
+TW_USE_FSCRYPT_POLICY := 2
+TW_FORCE_KEYMASTER_VER := true
+TW_PREPARE_DATA_MEDIA_EARLY := true
 
 # Storage
 RECOVERY_SDCARD_ON_DATA := true
