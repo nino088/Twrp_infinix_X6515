@@ -163,8 +163,8 @@ TW_DEFAULT_LANGUAGE := en
 TW_SCREEN_BLANK_ON_BOOT := true
 
 # Debug
-TWRP_EXCLUDE_LOGCAT := true
-TARGET_USES_LOGD := false
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
 
 # Tools / Resetprop and magiskboot
 TW_EXCLUDE_BASH := true
