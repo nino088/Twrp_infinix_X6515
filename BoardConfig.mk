@@ -173,6 +173,7 @@ TW_INCLUDE_REPACK_TOOL := true
 TW_EXCLUDE_TWRPAPP := true
 TW_EXCLUDE_APEX := true
 
+
 # Density / StatusBar
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
@@ -181,7 +182,6 @@ TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 1200
 TW_THEME := portrait_hdpi
 TARGET_SCREEN_DENSITY := 320
-
 # Status Bar
 TW_STATUS_ICONS_ALIGN := center
 TW_CUSTOM_CPU_POS := "300"
